@@ -9,6 +9,12 @@ function init() {
   fetchData("mandla");
 }
 
+function fetchDataFromForm(event) {
+    event.preventDefault();
+    const city = document.getElementById('city').value;
+    fetchData(city);
+  }
+
 searchBtn.addEventListener("click", () => {
   let city = document.getElementById("city").value;
   if (city == "") {
